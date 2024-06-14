@@ -8,7 +8,7 @@
 #include <math.h>
 using namespace std;
 
-#include "Punto.h"
+#include "Punto.hpp"
 
 //Metodos
 Punto::Punto() {

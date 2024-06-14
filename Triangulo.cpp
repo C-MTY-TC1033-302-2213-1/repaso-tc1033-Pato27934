@@ -3,7 +3,7 @@
 #include <math.h>
 using namespace std;
 
-#include "Triangulo.h"
+#include "Triangulo.hpp"
 
 Triangulo::Triangulo(){
     v1 = {0, 0};
