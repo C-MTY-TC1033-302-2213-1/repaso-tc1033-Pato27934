@@ -42,12 +42,13 @@ void Triangulo::setV3(Punto _v3){
 }
 
 double Triangulo::area(){
-    Punto medio;
-    medio.setX( v1.getX() - ((v1.getX()-v3.getX())/2) );
-    medio.setY( v1.getY() - ((v1.getY()-v3.getY())/2) );
-    int altura = medio.calculaDistancia(v2);
-    int base = v1.calculaDistancia(v3);
-    return (altura * base)/2;
+    double x1 = v1.getX(), y1 = v1.getY();
+    double x2 = v2.getX(), y2 = v2.getY();
+    double x3 = v3.getX(), y3 = v3.getY();
+    
+    double area = abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)) / 2.0;
+    
+    return area;
 }
 
 double Triangulo::perimetro(){
